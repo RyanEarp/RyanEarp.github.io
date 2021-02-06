@@ -293,20 +293,19 @@
 
   <div class = "column2">
     <div class = info>
-      <form action="contactform.php" method="POST">
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" placeholder="Enter your full name.."><br><br>
+      <form name = "gform" id = "gform" enctype = "text/plain" action = "https://docs.google.com/forms/d/e/1FAIpQLSdRyIATBpoo2d2fTYjNktqsitFTEyY9ym2X8WkxPJzpToWB6A/viewform?usp=pp_url" target="hidden_iframe" onsubmit="submitted=true;">
+            <label for="name">Name of Individual or Company</label><br>
+            <input type="text" id="entry.88413693" name="entry.88413693" placeholder="John Smith"><br><br>
             <label for="email">Email Address</label><br>
-            <input type="text" id="email" name="email" placeholder="Enter your email.."><br><br>
+            <input type="text" id="entry.71710636" name="entry.71710636" placeholder="something@domain.com"><br><br>
             <label for="subject">Subject</label><br>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea><br><br>
+            <textarea id="entry.407295754" name="entry.407295754" placeholder="Write something.." style="height:170px"></textarea><br><br>
             <label for="message">Message</label><br>
-            <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea><br><br>
-
-            <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LffMU0aAAAAAGL4raQv4U8PGtm6547zaR77hcSb"></div>
+            <textarea id="entry.787676748" name="entry.787676748" placeholder="Write something.." style="height:170px"></textarea><br><br>
             <br/>
-            <button id="submitBtn" disabled>Submit</button>
+            <input type="submit" value="Submit">
           </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     </div>
   </div>
 
@@ -367,10 +366,13 @@ for (i = 0; i < coll.length; i++) {
 
 </script>
 
-<script>
-  function recaptchaCallback() {
-    document.getElementById("submitBtn").disabled = false;
-  };
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
 </script>
 
 </body>
