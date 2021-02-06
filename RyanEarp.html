@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="utf-8">
+
+ <script src="https://unpkg.com/scrollreveal"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background: linear-gradient(-15deg, rgb(0,145,255), rgb(190,255,230));
+  }
+
+  .portrait img {
+    width: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  .bio {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    text-align: center;
+  }
+
+  .info {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .info img {
+    display: block;
+    margin: auto;
+    width: 40%;
+  }
+
+  .column1 {
+    width: 20%;
+    padding: 10px;
+    height: 100%;
+    background-color: rgba(255,255,255,.8);
+    font-size: 16px;
+    float: left;
+    margin: 15px;
+  }
+
+  .column2 {
+    width: 65%;
+    padding: 10px;
+    height: 100%;
+    background-color: rgba(255,255,255,.8);
+    float: left;
+    margin: 15px;
+    font-size: 20px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #myBtn {
+    background-color: red;
+    margin: auto;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+  }
+
+  #navBar {
+    width: 100%;
+    background-color: rgba(255,255,255,.8);
+    margin: 15px;
+  }
+
+  .navBarLinks {
+    display: inline-block;
+    padding-right: 6%;
+    padding-left: 6%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #navBar img{
+    width: 40px;
+    padding-right: 5%;
+    padding-top: 1.2%;
+    vertical-align: middle;
+    float: right;
+  }
+
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+  @media only screen and (max-width: 768px) {
+    .column2 {
+      width: 60%;
+    }
+    #navBar img {
+      width: 30px;
+      padding-top: 3%;
+    }
+    .column1 {
+      font-size: 12px;
+    }
+    .info {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 991px) and (min-width:769px) {
+    .column2 {
+      width: 65%;
+    }
+    .info {
+      font-size: 17px;
+    }
+    .info img {
+      width: 35%;
+    }
+
+  }
+
+  @media only screen and (max-width: 1199px) and (min-width:992px) {
+    .column2 {
+      width: 67%;
+    }
+    #navBar img {
+      width: 30px;
+      padding-top: 2%;
+    }
+
+    .info img {
+      display: block;
+      margin: auto;
+      width: 40%;
+  }
+
+    .info {
+      font-size: 22px;
+    }
+
+  .column1 {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .column2 {
+    width: 67%;
+  }
+  #navBar img {
+    width: 37px;
+    padding-top: 1.2%;
+  }
+
+  .info img {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+  .info {
+    font-size: 25px;
+  }
+
+.column1 {
+  font-size: 19px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+<div id = navBar>
+    <h2 class = navBarLinks >About</h2>
+    <h2 class = navBarLinks style = "color: gold;">Resume</h2>
+    <h2 class = navBarLinks>Contact</h2>
+    <a href="https://github.com/RyanEarp"><img src="github.png" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/ryan-a-earp/"><img src="linkedin.png" alt="LinkedIn"></a>
+
+
+</div>
+<div class = "row">
+  <div class = "column1">
+    <div class = "portrait">
+      <img src="vantine_linked_in_2585830.jpg" alt = "Portrait">
+      <div class = "bio">
+        <h1>Ryan A. Earp</h1>
+        <h2>About Me:</h2>
+        <p>I am a current Undergraduate of Bradley University pursuing a Bachelor's degree in Computer Information Systems. In addition to having my Security+ certification, I have extensive programming experience, most notably in the C++ and Java languages. </p>
+        <h2>Skills</h2>
+        <p><b>Programming Languages:</b><br>Java, C++, Python</p>
+        <p><b>Web Development & Scripting</b><br>HTML5, PHP, CSS, JavaScript</p>
+        <p><b>Database Management<br></b> MySQL, SQL</p>
+        <h2>Contact</h2>
+        <p>Email: ryanearp2@gmail.com</p>
+        <p>Phone: (309) 371-3111</p>
+        <h2>Links</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ryan-a-earp/">ryan-a-earp</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class = "column2">
+  <div class = info>
+    <div class = headline>
+      <hr>
+      <h2>Education</h2>
+      <hr>
+    </div>
+    <div class = punchline>
+      <img src = "Bradley.jpg" alt = "Bradley University">
+      <p>Bradley University - Senior<br> BS, Computer Information Systems<br> Concentration in Software, Web, and Computer Security<br>August 2017 - May 2021<br><b>GPA: 3.67/4.00</b></p>
+    </div>
+    <div class = headline>
+    <hr>
+    <h2>Certifications</h2>
+    <hr>
+  </div>
+  <div class = punchline>
+    <img src = "comptia-security-ce-certification.png" alt = "CompTIA Badge">
+    <p><b>Security+</b><br>Issued by CompTIA<br>August 2021 - August 2023<br><a href="https://www.youracclaim.com/badges/19b6c7f6-6187-4947-9f0f-25c9edeef6e8/public_url">Additional Details</a></p>
+  </div>
+  <div class = headline>
+    <hr>
+    <h2>Experience</h2>
+    <hr>
+  </div>
+  <div class = punchline>
+    <img src = "BECC.jpg" alt = "Bradley University - College of Business">
+    <p><b>Ecommerce Specialist - Technical Advisor</b><br>July 2020 - Present<br>Bradley University: Foster College of Business<br>Peoria, IL</p>
+    <ul>
+    <li style = "text-align: left;">Conducted research on the technical capabilities of food delivery platforms and over 200 local restaurants, resulting in the creation of a centralized, team database.</li>
+    <li style = "text-align: left;">Currently utilizing research to directly engage with local businesses, providing a custom tailored eCommerce strategy to safely attract and retain customers during the COVID-19 pandemic.</li>
+    </ul>
+    <a href="https://www.centralillinoisproud.com/news/local-news/bradley-university-looking-to-help-local-small-business-owners-through-workshop/">Additional Information</a>
+  </div>
+    <hr>
+    <h2>Leadership Experience</h2>
+    <hr>
+    <img src = "Cabinet.jpg" alt = "Phi Gamma Delta - Executive Board">
+    <p><b>Executive Board Member - Phi Gamma Delta Fraternity</b><br>Beta Pi Chapter<br>January 2019 – January 2020<br>Peoria, IL
+    <ul>
+      <li style = "text-align: left;">Applied an adaptive philosophy to organizational restructure, resulting in increased efficiency and the establishment of cross-functional teams.</li>
+      <li style = "text-align: left;">Obtained experience with problem-solving and analytical decision making by identifying and evaluating possible approaches based on input from fellow board members.</li>
+      <li style = "text-align: left;">Developed professional and effective oral and written communication traits by serving as the primary public relations representative for the organization.</li>
+    </ul>
+  <img src = "SABRC.jpg" alt = "SABRC Logo">
+  <p><b>Committee Member - Student Activities Budget Review Committee</b><br>January 2020 – January 2021<br>Bradley University - Student Government<br>                                                  Peoria, IL
+
+  <ul>
+    <li style = "text-align: left;">Aided in funding, reviewing, evaluating, and auditing expenditures of student organizations.</li>
+    <li style = "text-align: left;">Operated in a fast-paced, team-oriented setting to make critical financial decisions.</li>
+  </ul>
+  <img src = "IFC.jpg" alt = "IFC Logo">
+  <p><b>Board Member - Secretary</b><br>Interfraternal Council - Bradley University<br>January 2020 - January 2021<br>Peoria, IL</p>
+  <ul>
+    <li style = "text-align: left;">Collaborated with others on enacting creative approaches to organizational governance.</li>
+  </ul>
+    <hr>
+    <h2>Interests</h2>
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Return to Top</button>
+  </div>
+  </div>
+
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navBar");
+
+// Get the offset position of the navbar
+var sticky = navBar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+ScrollReveal().reveal('.headline', {delay: 200})
+ScrollReveal().reveal('.punchline', {delay: 500})
+
+</script>
+
+</body>
+
+</html>
