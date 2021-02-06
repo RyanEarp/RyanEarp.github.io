@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -6,14 +6,6 @@
 <meta charset="utf-8">
 
  <script src="https://unpkg.com/scrollreveal"></script>
-
- <script src="https://www.google.com/recaptcha/api.js"></script>
-
- <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -96,9 +88,7 @@
   #navBar {
     width: 100%;
     background-color: rgba(255,255,255,.8);
-    margin-left: 15px;
-    margin-right: 15px;
-    top: 0%;
+    margin: 15px;
   }
 
   .navBarLinks {
@@ -153,7 +143,7 @@
   .sticky {
   position: fixed;
   top: 0;
-  width: 50%;
+  width: 100%;
 }
 
 
@@ -234,18 +224,6 @@
 }
 }
 
-.twoColumn {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-}
-
-.threeColumn {
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
-}
-
 </style>
 
 </head>
@@ -254,17 +232,17 @@
 <div id = navBar>
     <h2 class = navBarLinks >About</h2>
     <div class = dropdown>
-    <a href="https://ryanearp.github.io"><h2 class = navBarLinksResume>Resume</h2></a>
+    <h2 class = navBarLinksResume style = "color: gold;">Resume</h2>
     <div class = dropdown-content>
-      <a href="https://ryanearp.github.io#education">Education</a>
-      <a href="https://ryanearp.github.io#certifications">Certifications</a>
-      <a href="https://ryanearp.github.io#experience">Experience</a>
-      <a href="https://ryanearp.github.io#leadershipExperience">Leadership Experience</a>
-      <a href="https://ryanearp.github.io#coursework">Coursework</a>
-      <a href="https://ryanearp.github.io#interests">Interests & Hobbies</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#experience">Experience</a>
+      <a href="#leadershipExperience">Leadership Experience</a>
+      <a href="#interests">Interests</a>
     </div>
   </div>
-    <h2 class = navBarLinks style = "color: gold;">Contact</h2>
+  <a href="https://ryanearp.github.io/contact.html">
+    <h2 class = navBarLinks>Contact</h2></a>
     <a href="https://github.com/RyanEarp"><img src="github.png" alt="GitHub"></a>
     <a href="https://www.linkedin.com/in/ryan-a-earp/"><img src="linkedin.png" alt="LinkedIn"></a>
 
@@ -292,24 +270,84 @@
   </div>
 
   <div class = "column2">
-    <div class = info>
-      <form name = "gform" id = "gform" enctype = "text/plain" action = "https://docs.google.com/forms/d/e/1FAIpQLSdRyIATBpoo2d2fTYjNktqsitFTEyY9ym2X8WkxPJzpToWB6A/viewform?usp=pp_url">
-            <label for="name">Name of Individual or Company</label><br>
-            <input type="text" id="entry.88413693" name="entry.88413693" placeholder="John Smith"><br><br>
-            <label for="email">Email Address</label><br>
-            <input type="text" id="entry.71710636" name="entry.71710636" placeholder="something@domain.com"><br><br>
-            <label for="subject">Subject</label><br>
-            <textarea id="entry.407295754" name="entry.407295754" placeholder="Write something.." style="height:170px"></textarea><br><br>
-            <label for="message">Message</label><br>
-            <textarea id="entry.787676748" name="entry.787676748" placeholder="Write something.." style="height:170px"></textarea><br><br>
-            <br/>
-            <input type="submit" value="Submit">
-          </form>
-          <p><i>*Will be given opportunity to reconfirm submission in Google Forms*</i></p>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+  <div class = info>
+    <div class = headline>
+      <hr>
+      <h2 id = "education">Education</h2>
+      <hr>
     </div>
+    <div class = punchline>
+      <img src = "Bradley.jpg" alt = "Bradley University">
+      <p>Bradley University - Senior<br> BS, Computer Information Systems<br> Concentration in Software, Web, and Computer Security<br>August 2017 - May 2021<br><b>GPA: 3.67/4.00</b></p>
+<p><b>Achievements and Awards</b></p>
+      <ul>
+      <li style = "text-align: left;">Recipient of Presidential Scholarship</li>
+      <li style = "text-align: left;">Dean's List: Six Semesters</li>
+      </ul>
+    </div>
+    <div class = headline>
+    <hr>
+    <h2 id = "certifications">Certifications</h2>
+    <hr>
+  </div>
+  <div class = punchline>
+    <img src = "comptia-security-ce-certification.png" alt = "CompTIA Badge">
+    <p><b>Security+</b><br>Issued by CompTIA<br>August 2021 - August 2023<br><a href="https://www.youracclaim.com/badges/19b6c7f6-6187-4947-9f0f-25c9edeef6e8/public_url">Additional Details</a></p>
+  </div>
+  <div class = headline>
+    <hr>
+    <h2 id = "experience">Experience</h2>
+    <hr>
+  </div>
+  <div class = punchline>
+    <img src = "BECC.jpg" alt = "Bradley University - College of Business">
+    <p><b>Ecommerce Specialist - Technical Advisor</b><br>July 2020 - Present<br>Bradley University: Foster College of Business<br>Peoria, IL</p>
+    <ul>
+    <li style = "text-align: left;">Conducted research on the technical capabilities of food delivery platforms and over 200 local restaurants, resulting in the creation of a centralized, team database.</li>
+    <li style = "text-align: left;">Currently utilizing research to directly engage with local businesses, providing a custom tailored eCommerce strategy to safely attract and retain customers during the COVID-19 pandemic.</li>
+    </ul>
+    <a href="https://www.centralillinoisproud.com/news/local-news/bradley-university-looking-to-help-local-small-business-owners-through-workshop/">Additional Information</a>
+  </div>
+  <div class = headline>
+    <hr>
+    <h2 id = "leadershipExperience">Leadership Experience</h2>
+    <hr>
+  </div>
+  <div class = punchline>
+    <img src = "Cabinet.jpg" alt = "Phi Gamma Delta - Executive Board">
+    <p><b>Executive Board Member - Phi Gamma Delta Fraternity</b><br>Beta Pi Chapter<br>January 2019 – January 2020<br>Peoria, IL
+    <ul>
+      <li style = "text-align: left;">Applied an adaptive philosophy to organizational restructure, resulting in increased efficiency and the establishment of cross-functional teams.</li>
+      <li style = "text-align: left;">Obtained experience with problem-solving and analytical decision making by identifying and evaluating possible approaches based on input from fellow board members.</li>
+      <li style = "text-align: left;">Developed professional and effective oral and written communication traits by serving as the primary public relations representative for the organization.</li>
+    </ul>
+  <img src = "SABRC.jpg" alt = "SABRC Logo">
+  <p><b>Committee Member - Student Activities Budget Review Committee</b><br>January 2020 – January 2021<br>Bradley University - Student Government<br>                                                  Peoria, IL
+
+  <ul>
+    <li style = "text-align: left;">Aided in funding, reviewing, evaluating, and auditing expenditures of student organizations.</li>
+    <li style = "text-align: left;">Operated in a fast-paced, team-oriented setting to make critical financial decisions.</li>
+  </ul>
+  <img src = "IFC.jpg" alt = "IFC Logo">
+  <p><b>Board Member - Secretary</b><br>Interfraternal Council - Bradley University<br>January 2020 - January 2021<br>Peoria, IL</p>
+  <ul>
+    <li style = "text-align: left;">Collaborated with others on enacting creative approaches to organizational governance.</li>
+  </ul>
+</div>
+    <div class = headline>
+    <hr>
+    <h2 id = "interests">Interests</h2>
+    <hr>
+    </div>
+    <div class = punchline>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Return to Top</button>
+  </div>
+  </div>
+
+</div>
 
 <script>
 window.onscroll = function() {myFunction()};
@@ -363,15 +401,6 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-</script>
-
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
 </script>
 
 </body>
