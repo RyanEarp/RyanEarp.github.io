@@ -94,6 +94,39 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
   }
+  .navBarLinksResume {
+    display: inline-block;
+    position: relative;
+    padding-right: 6%;
+    padding-left: 6%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
   #navBar img{
     width: 40px;
@@ -194,7 +227,16 @@
 <body>
 <div id = navBar>
     <h2 class = navBarLinks >About</h2>
-    <h2 class = navBarLinks style = "color: gold;">Resume</h2>
+    <div class = dropdown>
+    <h2 class = navBarLinksResume style = "color: gold;">Resume</h2>
+    <div class = dropdown-content>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#experience">Experience</a>
+      <a href="#leadershipExperience">Leadership Experience</a>
+      <a href="#interests">Interests</a>
+    </div>
+  </div>
     <h2 class = navBarLinks>Contact</h2>
     <a href="https://github.com/RyanEarp"><img src="github.png" alt="GitHub"></a>
     <a href="https://www.linkedin.com/in/ryan-a-earp/"><img src="linkedin.png" alt="LinkedIn"></a>
@@ -226,16 +268,21 @@
   <div class = info>
     <div class = headline>
       <hr>
-      <h2>Education</h2>
+      <h2 id = "education">Education</h2>
       <hr>
     </div>
     <div class = punchline>
       <img src = "Bradley.jpg" alt = "Bradley University">
       <p>Bradley University - Senior<br> BS, Computer Information Systems<br> Concentration in Software, Web, and Computer Security<br>August 2017 - May 2021<br><b>GPA: 3.67/4.00</b></p>
+<p><b>Achievements and Awards</b></p>
+      <ul>
+      <li style = "text-align: left;">Recipient of Presidential Scholarship</li>
+      <li style = "text-align: left;">Dean's List: Six Semesters</li>
+      </ul>
     </div>
     <div class = headline>
     <hr>
-    <h2>Certifications</h2>
+    <h2 id = "certifications">Certifications</h2>
     <hr>
   </div>
   <div class = punchline>
@@ -244,7 +291,7 @@
   </div>
   <div class = headline>
     <hr>
-    <h2>Experience</h2>
+    <h2 id = "experience">Experience</h2>
     <hr>
   </div>
   <div class = punchline>
@@ -256,9 +303,12 @@
     </ul>
     <a href="https://www.centralillinoisproud.com/news/local-news/bradley-university-looking-to-help-local-small-business-owners-through-workshop/">Additional Information</a>
   </div>
+  <div class = headline>
     <hr>
-    <h2>Leadership Experience</h2>
+    <h2 id = "eadershipExperience">Leadership Experience</h2>
     <hr>
+  </div>
+  <div class = punchline>
     <img src = "Cabinet.jpg" alt = "Phi Gamma Delta - Executive Board">
     <p><b>Executive Board Member - Phi Gamma Delta Fraternity</b><br>Beta Pi Chapter<br>January 2019 – January 2020<br>Peoria, IL
     <ul>
@@ -266,6 +316,8 @@
       <li style = "text-align: left;">Obtained experience with problem-solving and analytical decision making by identifying and evaluating possible approaches based on input from fellow board members.</li>
       <li style = "text-align: left;">Developed professional and effective oral and written communication traits by serving as the primary public relations representative for the organization.</li>
     </ul>
+  </div>
+  <div class = punchline>
   <img src = "SABRC.jpg" alt = "SABRC Logo">
   <p><b>Committee Member - Student Activities Budget Review Committee</b><br>January 2020 – January 2021<br>Bradley University - Student Government<br>                                                  Peoria, IL
 
@@ -273,13 +325,16 @@
     <li style = "text-align: left;">Aided in funding, reviewing, evaluating, and auditing expenditures of student organizations.</li>
     <li style = "text-align: left;">Operated in a fast-paced, team-oriented setting to make critical financial decisions.</li>
   </ul>
+</div>
+<div class = punchline>
   <img src = "IFC.jpg" alt = "IFC Logo">
   <p><b>Board Member - Secretary</b><br>Interfraternal Council - Bradley University<br>January 2020 - January 2021<br>Peoria, IL</p>
   <ul>
     <li style = "text-align: left;">Collaborated with others on enacting creative approaches to organizational governance.</li>
   </ul>
+</div>
     <hr>
-    <h2>Interests</h2>
+    <h2 id = "interests">Interests</h2>
     <hr>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -325,8 +380,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-ScrollReveal().reveal('.headline', {delay: 200})
-ScrollReveal().reveal('.punchline', {delay: 500})
+ScrollReveal().reveal('.headline', {delay: 100})
+ScrollReveal().reveal('.punchline', {delay: 300})
 
 </script>
 
