@@ -43,6 +43,10 @@
     width: 40%;
   }
 
+  .headline {
+    cursor: pointer;
+  }
+
   .column1 {
     width: 20%;
     padding: 10px;
@@ -305,7 +309,7 @@
   </div>
   <div class = headline>
     <hr>
-    <h2 id = "eadershipExperience">Leadership Experience</h2>
+    <h2 id = "leadershipExperience">Leadership Experience</h2>
     <hr>
   </div>
   <div class = punchline>
@@ -316,8 +320,6 @@
       <li style = "text-align: left;">Obtained experience with problem-solving and analytical decision making by identifying and evaluating possible approaches based on input from fellow board members.</li>
       <li style = "text-align: left;">Developed professional and effective oral and written communication traits by serving as the primary public relations representative for the organization.</li>
     </ul>
-  </div>
-  <div class = punchline>
   <img src = "SABRC.jpg" alt = "SABRC Logo">
   <p><b>Committee Member - Student Activities Budget Review Committee</b><br>January 2020 – January 2021<br>Bradley University - Student Government<br>                                                  Peoria, IL
 
@@ -325,18 +327,20 @@
     <li style = "text-align: left;">Aided in funding, reviewing, evaluating, and auditing expenditures of student organizations.</li>
     <li style = "text-align: left;">Operated in a fast-paced, team-oriented setting to make critical financial decisions.</li>
   </ul>
-</div>
-<div class = punchline>
   <img src = "IFC.jpg" alt = "IFC Logo">
   <p><b>Board Member - Secretary</b><br>Interfraternal Council - Bradley University<br>January 2020 - January 2021<br>Peoria, IL</p>
   <ul>
     <li style = "text-align: left;">Collaborated with others on enacting creative approaches to organizational governance.</li>
   </ul>
 </div>
+    <div class = headline>
     <hr>
     <h2 id = "interests">Interests</h2>
     <hr>
+    </div>
+    <div class = punchline>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Return to Top</button>
   </div>
@@ -382,6 +386,21 @@ function topFunction() {
 
 ScrollReveal().reveal('.headline', {delay: 100})
 ScrollReveal().reveal('.punchline', {delay: 300})
+
+
+var coll = document.getElementsByClassName("headline");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
 </script>
 
